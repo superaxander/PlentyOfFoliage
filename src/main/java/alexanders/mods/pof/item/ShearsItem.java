@@ -2,6 +2,7 @@ package alexanders.mods.pof.item;
 
 import alexanders.mods.pof.render.DamageableRenderer;
 import alexanders.mods.pof.tile.VariantTile;
+import de.ellpeck.rockbottom.api.GameContent;
 import de.ellpeck.rockbottom.api.RockBottomAPI;
 import de.ellpeck.rockbottom.api.entity.player.AbstractEntityPlayer;
 import de.ellpeck.rockbottom.api.inventory.IInventory;
@@ -34,7 +35,7 @@ public class ShearsItem extends ItemBasic implements IDamageable {
     public boolean onInteractWith(IWorld world, int x, int y, TileLayer layer, double mouseX, double mouseY, AbstractEntityPlayer player, ItemInstance instance) {
         if (RockBottomAPI.getNet().isServer() || !RockBottomAPI.getNet().isActive()) {
             Tile t = world.getState(layer, x, y).getTile();
-            if (t instanceof VariantTile) {
+            if (t instanceof VariantTile || t == GameContent.TILE_LEAVES) {
                 t.doBreak(world, x, y, TileLayer.MAIN, player, true, true);
                 instance.setMeta(instance.getMeta() + 1);
                 if (instance.getMeta() >= 128) {
