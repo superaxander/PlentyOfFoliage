@@ -14,7 +14,7 @@ public class Resources {
     public static IResourceName uglyPlant;
     public static IResourceName largeUglyPlant;
     public static IResourceName shears;
-    
+
     public static void init() {
         dryFarmland = createRes(PoF.instance, "dry_farmland");
         grass = createRes(PoF.instance, "grass");

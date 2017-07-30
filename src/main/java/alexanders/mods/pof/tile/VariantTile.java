@@ -49,6 +49,15 @@ public class VariantTile extends Tile {
     }
 
     @Override
+    public boolean canStay(IWorld world, int x, int y, TileLayer layer, int changedX, int changedY, TileLayer changedLayer) {
+        if (y - 1 == changedY && x == changedX) {
+            Tile below = world.getState(TileLayer.MAIN, x, y - 1).getTile();
+            return below == GameContent.TILE_DIRT || below == GameContent.TILE_GRASS;
+        }
+        return super.canStay(world, x, y, layer, changedX, changedY, changedLayer);
+    }
+
+    @Override
     public boolean canPlaceInLayer(TileLayer layer) {
         return layer == TileLayer.MAIN;
     }

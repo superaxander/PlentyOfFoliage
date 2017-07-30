@@ -1,10 +1,10 @@
-pof/tile.blue_berry_bush=Blauwe Bessen Struik
-pof/tile.red_berry_bush=Rode Bessen Struik
-pof/tile.dry_farmland=Landbouwgrond
-pof/tile.grass=Gras
-pof/tile.long_grass=Lang Gras
-pof/tile.ugly_plant=Plant
-pof/tile.large_ugly_plant=Grote Plant
+pof/item.blue_berry_bush=Blauwe Bessen Struik
+pof/item.red_berry_bush=Rode Bessen Struik
+pof/item.dry_farmland=Landbouwgrond
+pof/item.grass=Gras
+pof/item.long_grass=Lang Gras
+pof/item.ugly_plant=Plant
+pof/item.large_ugly_plant=Grote Plant
 pof/item.shears=Heggenschaar
 pof/item.blue_berry_bush.berry=Blauwe Bessen
 pof/item.red_berry_bush.berry=Rode Bessen

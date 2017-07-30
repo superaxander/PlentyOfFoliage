@@ -1,10 +1,10 @@
-pof/tile.blue_berry_bush=Blue Berry Bush
-pof/tile.red_berry_bush=Red Berry Bush
-pof/tile.dry_farmland=Farmland
-pof/tile.grass=Grass
-pof/tile.long_grass=Long Grass
-pof/tile.ugly_plant=Plant
-pof/tile.large_ugly_plant=Large Plant
+pof/item.blue_berry_bush=Blue Berry Bush
+pof/item.red_berry_bush=Red Berry Bush
+pof/item.dry_farmland=Farmland
+pof/item.grass=Grass
+pof/item.long_grass=Long Grass
+pof/item.ugly_plant=Plant
+pof/item.large_ugly_plant=Large Plant
 pof/item.shears=Shears
 pof/item.blue_berry_bush.berry=Blue Berries
 pof/item.red_berry_bush.berry=Red Berries

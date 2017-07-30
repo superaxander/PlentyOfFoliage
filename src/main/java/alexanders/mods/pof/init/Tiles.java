@@ -11,7 +11,7 @@ public class Tiles {
     public static VariantTile redBerryBush;
     public static VariantTile uglyPlant;
     public static VariantTile largeUglyPlant;
-    
+
     public static void init() {
         Asset.dry_farmland.tile = dryFarmland = new VariantTile(Resources.dryFarmland);
         Asset.grass.tile = grass = new VariantTile(Resources.grass);

@@ -22,12 +22,11 @@ public class VariantTextureRenderer<T extends VariantTile> implements ITileRende
     @Override
     public void render(IGameInstance game, IAssetManager manager, Graphics g, IWorld world, VariantTile tile, TileState state, int x, int y, TileLayer layer, float renderX, float renderY, float scale, Color[] light) {
         int variant = tile.getVariant(world, x, y);
-       
+
         if (variant >= tile.variant.getVariants() / 2) {
             Texture texture = textures[variant - tile.variant.getVariants() / 2];
-            texture.drawWithLight(renderX+scale, renderY, renderX, renderY+scale, 0, 0, texture.getWidth(), texture.getHeight(), light, null);
-        }
-        else
+            texture.drawWithLight(renderX + scale, renderY, renderX, renderY + scale, 0, 0, texture.getWidth(), texture.getHeight(), light, null);
+        } else
             textures[variant].drawWithLight(renderX, renderY, scale, scale, light);
 
     }

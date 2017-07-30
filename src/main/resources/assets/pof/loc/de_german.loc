@@ -1,10 +1,10 @@
-pof/tile.blue_berry_bush=Blaue Beerenbusch
-pof/tile.red_berry_bush=Rote Beerenbusch
-pof/tile.dry_farmland=Ackerland
-pof/tile.grass=Gras
-pof/tile.long_grass=Lang Gras
-pof/tile.ugly_plant=Pflanz
-pof/tile.large_ugly_plant=Große Pflanz
+pof/item.blue_berry_bush=Blaue Beerenbusch
+pof/item.red_berry_bush=Rote Beerenbusch
+pof/item.dry_farmland=Ackerland
+pof/item.grass=Gras
+pof/item.long_grass=Lang Gras
+pof/item.ugly_plant=Pflanz
+pof/item.large_ugly_plant=Große Pflanz
 pof/item.shears=Heckenschere
 pof/item.blue_berry_bush.berry=Blaue Beeren
 pof/item.red_berry_bush.berry=Rote Beeren

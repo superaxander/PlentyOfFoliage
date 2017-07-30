@@ -16,10 +16,10 @@ public enum Asset {
     large_ugly_plant(1, 20),
     dry_farmland(2, 0);
 
-    public VariantTextureRenderer renderer;
-    public VariantTile tile;
     public final int amount;
     public final int chance; // 1 in chance
+    public VariantTextureRenderer renderer;
+    public VariantTile tile;
 
     Asset(int amount, int chance) {
         this.amount = amount;
@@ -31,7 +31,7 @@ public enum Asset {
         grass.renderer = new VariantTextureRenderer(getTextures(manager, Resources.grass, 4));
         long_grass.renderer = new VariantTextureRenderer(getTextures(manager, Resources.longGrass, 4));
         blue_berry_bush.renderer = new BerryBushRenderer(getTextures(manager, Resources.blueBerryBush, 2), getEmptyTextures(manager, Resources.blueBerryBush, 2));
-        red_berry_bush.renderer = new BerryBushRenderer(getTextures(manager, Resources.redBerryBush, 2), getEmptyTextures(manager, Resources.blueBerryBush, 2));
+        red_berry_bush.renderer = new BerryBushRenderer(getTextures(manager, Resources.redBerryBush, 2), getEmptyTextures(manager, Resources.redBerryBush, 2));
         ugly_plant.renderer = new VariantTextureRenderer(getTextures(manager, Resources.uglyPlant, 1));
         large_ugly_plant.renderer = new VariantTextureRenderer(getTextures(manager, Resources.largeUglyPlant, 1));
     }
