@@ -17,6 +17,8 @@ import de.ellpeck.rockbottom.api.IGameInstance;
 import de.ellpeck.rockbottom.api.RockBottomAPI;
 import de.ellpeck.rockbottom.api.assets.IAssetManager;
 import de.ellpeck.rockbottom.api.construction.BasicRecipe;
+import de.ellpeck.rockbottom.api.construction.resource.ResUseInfo;
+import de.ellpeck.rockbottom.api.construction.resource.ResourceRegistry;
 import de.ellpeck.rockbottom.api.event.IEventHandler;
 import de.ellpeck.rockbottom.api.event.impl.EntityDamageEvent;
 import de.ellpeck.rockbottom.api.event.impl.EntityTickEvent;
@@ -28,6 +30,8 @@ import de.ellpeck.rockbottom.api.mod.IMod;
 import static de.ellpeck.rockbottom.api.GameContent.TILE_ROCK;
 import static de.ellpeck.rockbottom.api.GameContent.TILE_WOOD_BOARDS;
 import static de.ellpeck.rockbottom.api.RockBottomAPI.*;
+import static de.ellpeck.rockbottom.api.construction.resource.ResourceRegistry.RAW_STONE;
+import static de.ellpeck.rockbottom.api.construction.resource.ResourceRegistry.WOOD_BOARDS;
 
 public class PoF implements IMod {
     public static PoF instance;
@@ -70,7 +74,7 @@ public class PoF implements IMod {
     @Override
     public void init(IGameInstance game, IApiHandler apiHandler, IEventHandler eventHandler) {
         ShearsItem shears = new ShearsItem(Resources.shears);
-        MANUAL_CONSTRUCTION_RECIPES.add(new BasicRecipe(new ItemInstance(shears), new ItemInstance(TILE_ROCK, 6), new ItemInstance(TILE_WOOD_BOARDS, 3)));
+        MANUAL_CONSTRUCTION_RECIPES.add(new BasicRecipe(new ItemInstance(shears), new ResUseInfo(RAW_STONE, 6), new ResUseInfo(WOOD_BOARDS, 3)));
         ItemBasic berryBlue = new SpeedBoostItem(Resources.blueBerryBush.addSuffix(".berry"));
         ItemBasic berryRed = new JumpBoostItem(Resources.redBerryBush.addSuffix(".berry"));
         shears.register();
