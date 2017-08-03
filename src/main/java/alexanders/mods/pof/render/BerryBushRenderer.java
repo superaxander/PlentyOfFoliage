@@ -4,6 +4,7 @@ import alexanders.mods.pof.tile.BerryBushTile;
 import de.ellpeck.rockbottom.api.IGameInstance;
 import de.ellpeck.rockbottom.api.assets.IAssetManager;
 import de.ellpeck.rockbottom.api.assets.tex.Texture;
+import de.ellpeck.rockbottom.api.item.ItemInstance;
 import de.ellpeck.rockbottom.api.tile.state.TileState;
 import de.ellpeck.rockbottom.api.world.IWorld;
 import de.ellpeck.rockbottom.api.world.TileLayer;
@@ -33,7 +34,7 @@ public class BerryBushRenderer<T extends BerryBushTile> extends VariantTextureRe
     }
 
     @Override
-    public void renderItem(IGameInstance game, IAssetManager manager, Graphics g, BerryBushTile tile, int meta, float x, float y, float scale, Color filter) {
+    public void renderItem(IGameInstance game, IAssetManager manager, Graphics g, BerryBushTile tile, ItemInstance instance, float x, float y, float scale, Color filter) {
         emptyTextures[0].draw(x, y, scale, scale, filter);
     }
 }

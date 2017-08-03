@@ -4,6 +4,7 @@ import alexanders.mods.pof.tile.VariantTile;
 import de.ellpeck.rockbottom.api.IGameInstance;
 import de.ellpeck.rockbottom.api.assets.IAssetManager;
 import de.ellpeck.rockbottom.api.assets.tex.Texture;
+import de.ellpeck.rockbottom.api.item.ItemInstance;
 import de.ellpeck.rockbottom.api.render.tile.ITileRenderer;
 import de.ellpeck.rockbottom.api.tile.state.TileState;
 import de.ellpeck.rockbottom.api.world.IWorld;
@@ -32,7 +33,7 @@ public class VariantTextureRenderer<T extends VariantTile> implements ITileRende
     }
 
     @Override
-    public void renderItem(IGameInstance game, IAssetManager manager, Graphics g, VariantTile tile, int meta, float x, float y, float scale, Color filter) {
+    public void renderItem(IGameInstance game, IAssetManager manager, Graphics g, VariantTile tile, ItemInstance instance, float x, float y, float scale, Color filter) {
         textures[0].draw(x, y, scale, scale, filter);
     }
 

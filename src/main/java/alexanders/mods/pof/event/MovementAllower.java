@@ -8,7 +8,7 @@ import de.ellpeck.rockbottom.api.event.impl.ResetMovedPlayerEvent;
 public class MovementAllower implements IEventListener<ResetMovedPlayerEvent> { //Awful name I know
     @Override
     public EventResult listen(EventResult result, ResetMovedPlayerEvent event) {
-        
+
         DataSet data = event.player.getAdditionalData();
         if (data != null) {
             int speedLeft;

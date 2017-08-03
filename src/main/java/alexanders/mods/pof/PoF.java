@@ -18,7 +18,6 @@ import de.ellpeck.rockbottom.api.RockBottomAPI;
 import de.ellpeck.rockbottom.api.assets.IAssetManager;
 import de.ellpeck.rockbottom.api.construction.BasicRecipe;
 import de.ellpeck.rockbottom.api.construction.resource.ResUseInfo;
-import de.ellpeck.rockbottom.api.construction.resource.ResourceRegistry;
 import de.ellpeck.rockbottom.api.event.IEventHandler;
 import de.ellpeck.rockbottom.api.event.impl.EntityDamageEvent;
 import de.ellpeck.rockbottom.api.event.impl.EntityTickEvent;
@@ -27,8 +26,6 @@ import de.ellpeck.rockbottom.api.item.ItemBasic;
 import de.ellpeck.rockbottom.api.item.ItemInstance;
 import de.ellpeck.rockbottom.api.mod.IMod;
 
-import static de.ellpeck.rockbottom.api.GameContent.TILE_ROCK;
-import static de.ellpeck.rockbottom.api.GameContent.TILE_WOOD_BOARDS;
 import static de.ellpeck.rockbottom.api.RockBottomAPI.*;
 import static de.ellpeck.rockbottom.api.construction.resource.ResourceRegistry.RAW_STONE;
 import static de.ellpeck.rockbottom.api.construction.resource.ResourceRegistry.WOOD_BOARDS;
