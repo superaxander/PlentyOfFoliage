@@ -8,7 +8,7 @@ import de.ellpeck.rockbottom.api.event.impl.EntityDamageEvent;
 public class DamageNegator implements IEventListener<EntityDamageEvent> {
     @Override
     public EventResult listen(EventResult result, EntityDamageEvent event) {
-        if (event.entity.fallAmount > 0 && event.entity.collidedVert) {
+        if (event.entity.isFalling && event.entity.collidedVert) {
             DataSet additionalSet;
             if ((additionalSet = event.entity.getAdditionalData()) != null) {
                 if (additionalSet.getInt("effectJumpActive") > 0) {
