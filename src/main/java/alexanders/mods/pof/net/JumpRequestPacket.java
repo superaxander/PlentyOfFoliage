@@ -34,9 +34,9 @@ public class JumpRequestPacket implements IPacket {
 
     @Override
     public void handle(IGameInstance game, ChannelHandlerContext context) {
-        game.scheduleAction(() -> {
+        game.enqueueAction((gameInstance, o) -> {
             if (uuid != null) {
-                Entity e = game.getWorld().getEntity(uuid);
+                Entity e = gameInstance.getWorld().getEntity(uuid);
                 if (e != null) {
                     DataSet additionalData;
                     if ((additionalData = e.getAdditionalData()) != null) {
@@ -49,7 +49,6 @@ public class JumpRequestPacket implements IPacket {
                     }
                 }
             }
-            return true;
-        });
+        }, null);
     }
 }

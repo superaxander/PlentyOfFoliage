@@ -1,12 +1,17 @@
 {
   "pof": {
+    "desc": {
+      "mod": "Voegt een boel begroeiing toe aan het spel"
+    },
     "item": {
       "blue_berry_bush": "Blauwe Bessen Struik",
+      "blue_berry_bush.berry": "Blauwe Bes",
       "dry_farmland": "Landbouwgrond",
       "grass": "Gras",
       "large_ugly_plant": "Grote Plant",
       "long_grass": "Lang Gras",
       "red_berry_bush": "Rode Bessen Struik",
+      "red_berry_bush.berry": "Rode Bess",
       "shears": "Heggenschaar",
       "ugly_plant": "Plant"
     }

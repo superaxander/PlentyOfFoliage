@@ -1,12 +1,17 @@
 {
   "pof": {
+    "desc": {
+      "mod": "Adding a bunch of foliage to the game"
+    },
     "item": {
       "blue_berry_bush": "Blaue Beerenbusch",
+      "blue_berry_bush.berry": "Blaue Beere",
       "dry_farmland": "Ackerland",
       "grass": "Gras",
       "large_ugly_plant": "Große Pflanz",
       "long_grass": "Lang Gras",
       "red_berry_bush": "Rote Beerenbusch",
+      "red_berry_bush.berry": "Rote Beere",
       "shears": "Heckenschere",
       "ugly_plant": "Pflanz"
     }

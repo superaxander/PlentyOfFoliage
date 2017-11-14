@@ -12,7 +12,7 @@ import de.ellpeck.rockbottom.api.util.BoundBox;
 import de.ellpeck.rockbottom.api.util.Util;
 import de.ellpeck.rockbottom.api.util.reg.IResourceName;
 import de.ellpeck.rockbottom.api.world.IWorld;
-import de.ellpeck.rockbottom.api.world.TileLayer;
+import de.ellpeck.rockbottom.api.world.layer.TileLayer;
 
 public class VariantTile extends Tile {
     public IntProp variant;
@@ -45,14 +45,14 @@ public class VariantTile extends Tile {
     @Override
     public boolean canPlace(IWorld world, int x, int y, TileLayer layer) {
         Tile below = world.getState(TileLayer.MAIN, x, y - 1).getTile();
-        return (below == GameContent.TILE_DIRT || below == GameContent.TILE_GRASS) && super.canPlace(world, x, y, layer);
+        return (below == GameContent.TILE_SOIL || below == GameContent.TILE_GRASS) && super.canPlace(world, x, y, layer);
     }
 
     @Override
     public boolean canStay(IWorld world, int x, int y, TileLayer layer, int changedX, int changedY, TileLayer changedLayer) {
         if (y - 1 == changedY && x == changedX) {
             Tile below = world.getState(TileLayer.MAIN, x, y - 1).getTile();
-            return below == GameContent.TILE_DIRT || below == GameContent.TILE_GRASS;
+            return below == GameContent.TILE_SOIL || below == GameContent.TILE_GRASS;
         }
         return super.canStay(world, x, y, layer, changedX, changedY, changedLayer);
     }

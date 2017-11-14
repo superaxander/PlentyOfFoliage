@@ -9,7 +9,7 @@ import de.ellpeck.rockbottom.api.tile.state.TileState;
 import de.ellpeck.rockbottom.api.util.Util;
 import de.ellpeck.rockbottom.api.util.reg.IResourceName;
 import de.ellpeck.rockbottom.api.world.IWorld;
-import de.ellpeck.rockbottom.api.world.TileLayer;
+import de.ellpeck.rockbottom.api.world.layer.TileLayer;
 
 import static de.ellpeck.rockbottom.api.RockBottomAPI.ITEM_REGISTRY;
 
@@ -50,9 +50,9 @@ public class BerryBushTile extends VariantTile {
     }
 
     @Override
-    public void updateRandomly(IWorld world, int x, int y) {
+    public void updateRandomly(IWorld world, int x, int y, TileLayer layer) {
         if (Util.RANDOM.nextInt(16) == 0) {
-            world.setState(x, y, world.getState(x, y).prop(empty, false));
+            world.setState(layer, x, y, world.getState(x, y).prop(empty, false));
         }
     }
 }

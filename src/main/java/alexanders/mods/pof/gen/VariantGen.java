@@ -1,21 +1,24 @@
 package alexanders.mods.pof.gen;
 
 import alexanders.mods.pof.init.Asset;
+import de.ellpeck.rockbottom.api.util.Util;
 import de.ellpeck.rockbottom.api.world.IChunk;
 import de.ellpeck.rockbottom.api.world.IWorld;
-import de.ellpeck.rockbottom.api.world.TileLayer;
+import de.ellpeck.rockbottom.api.world.layer.TileLayer;
 import de.ellpeck.rockbottom.api.world.gen.IWorldGenerator;
 
 import java.util.Random;
 
 public class VariantGen implements IWorldGenerator {
+    private Random rand = new Random();
     @Override
-    public boolean shouldGenerate(IWorld world, IChunk chunk, Random rand) {
+    public boolean shouldGenerate(IWorld world, IChunk chunk) {
         return chunk.getGridY() == 0;
     }
 
     @Override
-    public void generate(IWorld world, IChunk chunk, Random rand) {
+    public void generate(IWorld world, IChunk chunk) {
+        rand.setSeed(Util.scrambleSeed(chunk.getX(), chunk.getY(), world.getSeed()));
         Asset[] assets = Asset.values();
         int amount = rand.nextInt(64) + 1;
         //System.out.println(amount);

@@ -4,7 +4,7 @@ import alexanders.mods.pof.render.BerryBushRenderer;
 import alexanders.mods.pof.render.VariantTextureRenderer;
 import alexanders.mods.pof.tile.VariantTile;
 import de.ellpeck.rockbottom.api.assets.IAssetManager;
-import de.ellpeck.rockbottom.api.assets.tex.Texture;
+import de.ellpeck.rockbottom.api.assets.ITexture;
 import de.ellpeck.rockbottom.api.util.reg.IResourceName;
 
 public enum Asset {
@@ -36,17 +36,17 @@ public enum Asset {
         large_ugly_plant.renderer = new VariantTextureRenderer(getTextures(manager, Resources.largeUglyPlant, 1));
     }
 
-    private static Texture[] getEmptyTextures(IAssetManager manager, IResourceName name, int amount) {
+    private static ITexture[] getEmptyTextures(IAssetManager manager, IResourceName name, int amount) {
         name = name.addSuffix("_empty");
-        Texture[] textures = new Texture[amount];
+        ITexture[] textures = new ITexture[amount];
         for (int i = 1; i <= amount; i++) {
             textures[i - 1] = manager.getTexture(name.addSuffix("_" + i));
         }
         return textures;
     }
 
-    private static Texture[] getTextures(IAssetManager manager, IResourceName name, int amount) {
-        Texture[] textures = new Texture[amount];
+    private static ITexture[] getTextures(IAssetManager manager, IResourceName name, int amount) {
+        ITexture[] textures = new ITexture[amount];
         for (int i = 1; i <= amount; i++) {
             textures[i - 1] = manager.getTexture(name.addSuffix("_" + i));
         }
